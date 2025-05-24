@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Mentor - Get Your Guidance</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">Get Your Guidance</a>
+            </div>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="blogs.html" class="nav-link">Blogs</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Form Hero Section -->
+    <section class="hero" style="background: linear-gradient(to right, var(--light-blue), var(--mint-green));">
+        <div class="container hero-content">
+            <h1 class="hero-title">Find a Mentor</h1>
+            <p class="hero-subtitle">Fill out the form below to get matched with a mentor who can guide you on your educational journey.</p>
+        </div>
+    </section>
+
+    <!-- Student Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title">Student Information</h2>
+                <form id="student-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="current-institute" class="form-label">Current Institute/College</label>
+                        <input type="text" id="current-institute" name="current-institute" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" id="location" name="location" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="whatsapp" class="form-label">Contact (WhatsApp)</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Preferences:</label>
+                        
+                        <div class="form-group">
+                            <label for="field-of-study" class="form-label">Field of Study</label>
+                            <select id="field-of-study" name="field-of-study" class="form-select" required>
+                                <option value="">Select your field of study</option>
+                                <option value="business">Business & Management</option>
+                                <option value="engineering">Engineering</option>
+                                <option value="computer-science">Computer Science</option>
+                                <option value="arts">Arts & Humanities</option>
+                                <option value="medicine">Medicine & Health Sciences</option>
+                                <option value="law">Law</option>
+                                <option value="social-sciences">Social Sciences</option>
+                                <option value="natural-sciences">Natural Sciences</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="study-location" class="form-label">Where are you planning to study?</label>
+                            <select id="study-location" name="study-location" class="form-select" required>
+                                <option value="">Select location</option>
+                                <option value="usa">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="canada">Canada</option>
+                                <option value="australia">Australia</option>
+                                <option value="europe">Europe</option>
+                                <option value="asia">Asia</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="specific-institute" class="form-label">Any specific Institute in mind?</label>
+                            <input type="text" id="specific-institute" name="specific-institute" class="form-input" placeholder="E.g., Harvard, MIT, Oxford">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additional-info" class="form-label">Additional Information</label>
+                        <textarea id="additional-info" name="additional-info" class="form-textarea" placeholder="Tell us more about your goals and what you're looking for in a mentor"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Get Your Guidance is a student-led platform that bridges the gap between study-abroad aspirants and students currently pursuing their dream courses at top global universities.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="index.html">Home</a></li>
+                    <li class="footer-link"><a href="about.html">About Us</a></li>
+                    <li class="footer-link"><a href="blogs.html">Blogs</a></li>
+                    <li class="footer-link"><a href="form1.html">Find a Mentor</a></li>
+                    <li class="footer-link"><a href="form2.html">Become a Mentor</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@getyourguidance.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (123) 456-7890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Get Your Guidance. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
