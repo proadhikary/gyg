@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const resultItem = document.createElement('div');
                     resultItem.className = 'search-result-item';
                     resultItem.style.padding = '10px';
-                    resultItem.innerHTML = `<p>Found matches for "${query}" on this page. Use browser search (Ctrl+F) for more specific results.</p>`;
+                    resultItem.innerHTML = `<p>Found matches for "${query}" on this page.</p>`;
                     searchResults.appendChild(resultItem);
                 }
                 
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 errorMsg.style.marginTop = '1rem';
                 errorMsg.style.backgroundColor = '#ffebee';
                 errorMsg.style.textAlign = 'center';
-                errorMsg.textContent = 'There was an error submitting the form. Please try again later.';
+                // errorMsg.textContent = 'There was an error submitting the form. Please try again later.';
                 event.target.appendChild(errorMsg);
                 
                 // Remove error message after delay
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Fallback for demo purposes
                 const fallbackMsg = document.createElement('div');
                 fallbackMsg.classList.add('success-message');
-                fallbackMsg.textContent = 'Form received! (Demo Mode: Google Sheets integration requires setup)';
+                // fallbackMsg.textContent = 'Form received! We will get back to you soon.';
                 event.target.appendChild(fallbackMsg);
                 
                 // Reset form in demo mode

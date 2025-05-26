@@ -13,7 +13,7 @@
     <header class="header">
         <div class="container header-container">
             <div class="logo">
-                <a href="index.html">GYGe</a>
+                <a href="index.html">GYG</a>
             </div>
             <div class="mobile-toggle" id="mobile-toggle">
                 <i class="fas fa-bars"></i>
@@ -44,7 +44,8 @@
         <div class="container">
             <div class="form-container">
                 <h2 class="form-title">Student Information</h2>
-                <form id="student-form">
+                <form id="student-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b1346181-f9f1-47aa-8834-a66b24c002d6">
                     <div class="form-group">
                         <label for="name" class="form-label">Full Name</label>
                         <input type="text" id="name" name="name" class="form-input" required>
@@ -113,7 +114,7 @@
                         <label for="additional-info" class="form-label">Additional Information</label>
                         <textarea id="additional-info" name="additional-info" class="form-textarea" placeholder="Tell us more about your goals and what you're looking for in a mentor"></textarea>
                     </div>
-                    
+                    <center><div class="h-captcha" data-captcha="true"></div></center><br>
                     <button type="submit" class="form-submit">Submit</button>
                 </form>
             </div>
@@ -164,7 +165,7 @@
             <p>&copy; 2025 Get Your Guidance. All Rights Reserved.</p>
         </div>
     </footer>
-
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="js/script.js"></script>
 </body>
 </html>
