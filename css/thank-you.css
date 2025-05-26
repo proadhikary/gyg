@@ -1,0 +1,349 @@
+/* Thank You Page Animation Styles */
+.thank-you-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: var(--light-pink);
+  position: relative;
+  overflow: hidden;
+}
+
+.thank-you-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.thank-you-title {
+  font-size: 2.5rem;
+  color: var(--dark-red);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards 0.3s;
+}
+
+.thank-you-message {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+
+.thank-you-icon {
+  font-size: 5rem;
+  color: var(--dark-red);
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.return-home {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--dark-red);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards 0.9s;
+  box-shadow: 0 4px 15px rgba(92, 0, 5, 0.2);
+}
+
+.return-home:hover {
+  background-color: #7a0007;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(92, 0, 5, 0.3);
+}
+
+/* Background Animation */
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 15s infinite ease-in-out;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  background-color: var(--mint-green);
+  top: -100px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  background-color: var(--light-blue);
+  bottom: -50px;
+  right: -50px;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  background-color: var(--light-red);
+  top: 50%;
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.circle-4 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--dark-red);
+  bottom: 30%;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+/* Checkmark Animation */
+.checkmark-circle {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 2rem;
+}
+
+.checkmark-circle .background {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--mint-green);
+  position: absolute;
+  opacity: 0;
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.checkmark-circle .checkmark {
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scaleIn 0.5s ease-out forwards 0.5s;
+}
+
+.checkmark-circle .checkmark:after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 35px;
+  border-bottom: 10px solid var(--dark-red);
+  border-right: 10px solid var(--dark-red);
+  transform: rotate(45deg);
+}
+
+/* Confetti Animation */
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  animation: confettiFall 5s ease-out forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(20px, 20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .thank-you-title {
+    font-size: 2rem;
+  }
+
+  .thank-you-message {
+    font-size: 1rem;
+  }
+
+  .checkmark-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .checkmark-circle .background {
+    width: 120px;
+    height: 120px;
+  }
+
+  .checkmark-circle .checkmark:after {
+    width: 56px;
+    height: 28px;
+    border-bottom: 8px solid var(--dark-red);
+    border-right: 8px solid var(--dark-red);
+  }
+}
+
+@media (max-width: 480px) {
+  .thank-you-title {
+    font-size: 1.8rem;
+  }
+
+  .thank-you-icon {
+    font-size: 4rem;
+  }
+
+  .circle-1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-2 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+
+.checkmark__circle {
+  stroke-dasharray: 66;
+  stroke-dashoffset: 66;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+  width: 156px;
+  height: 156px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 3;
+  stroke: #06ca48;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0
+  }
+}
+
+@keyframes scale {
+
+  0%,
+  100% {
+    transform: none
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1)
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142
+  }
+}

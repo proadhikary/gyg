@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Get Your Guidance</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5c0005">
+    <meta name="msapplication-TileColor" content="#cae4d7">
+    <meta name="theme-color" content="#cae4d7">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional.css">
+    <link rel="stylesheet" href="css/mobile-animations.css">
+    <link rel="stylesheet" href="css/color-transitions.css">
+    <link rel="stylesheet" href="css/thank-you.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">GYG</a>
+            </div>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="blogs.html" class="nav-link">Blogs</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-container">
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-4"></div>
+        </div>
+
+        <!-- Confetti Container -->
+        <div class="confetti-container" id="confetti-container"></div>
+
+        <div class="thank-you-content">
+            <!-- Checkmark Animation
+            <div class="checkmark-circle">
+                <div><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Eo_circle_green_checkmark.svg"></div>
+            </div> -->
+            <div class="wrapper"> <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+            </div>
+
+            <h1 class="thank-you-title">Thank You for Your Interest!</h1>
+            <p class="thank-you-message">We've received your submission and appreciate your interest. Our team will
+                contact you within 24 hours to discuss the next steps in your journey.</p>
+            <a href="index.html" class="return-home">Return to Homepage</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Get Your Guidance is a student-led platform that bridges the gap between study-abroad aspirants and
+                    students currently pursuing their dream courses at top global universities.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="index.html">Home</a></li>
+                    <li class="footer-link"><a href="about.html">About Us</a></li>
+                    <li class="footer-link"><a href="blogs.html">Blogs</a></li>
+                    <li class="footer-link"><a href="forms/student.html">Find a Mentor</a></li>
+                    <li class="footer-link"><a href="forms/beamentor.html">Become a Mentor</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>helllo@getyourguidance.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 70560 79792</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Get Your Guidance. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/thank-you.js"></script>
+</body>
+
+</html>
