@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Show success message
                 const successMsg = document.createElement('div');
                 successMsg.classList.add('success-message');
-                successMsg.textContent = 'Form submitted successfully! We will get back to you soon.';
+                // successMsg.textContent = 'Form submitted successfully! We will get back to you soon.';
                 form.appendChild(successMsg);
 
                 // Reset form after successful submission
