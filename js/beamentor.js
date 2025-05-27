@@ -4,10 +4,8 @@ document.getElementById('mentor-form').addEventListener('submit', function (even
     const form = event.target;
     const checkboxes1 = document.getElementById("admission-process").querySelectorAll(".checkbox-input");
     const checkboxes2 = document.getElementById("topics-can-guide").querySelectorAll(".checkbox-input");
-    const checkboxes3 = document.getElementById("mentorship-sessions").querySelectorAll(".checkbox-input");
     const hiddenInput1 = document.getElementById("admissionCombined");
     const hiddenInput2 = document.getElementById("guideCombined");
-    const hiddenInput3 = document.getElementById("sessionsCombined");
 
     const selected1 = Array.from(checkboxes1)
         .filter(cb => cb.checked)
@@ -18,8 +16,6 @@ document.getElementById('mentor-form').addEventListener('submit', function (even
         .filter(cb => cb.checked)
         .map(cb => cb.value);
     hiddenInput2.value = selected2.join(", ");
-
-    hiddenInput3.value = checkboxes3[0]
 
     const formData = new FormData(form);
 
