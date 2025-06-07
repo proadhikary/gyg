@@ -126,7 +126,8 @@ a:hover {
 }
 
 .logo img {
-  height: 50px;
+  display: block;
+  height: 60px;
 }
 
 .nav-menu {
@@ -773,9 +774,9 @@ a:hover {
     margin: 1rem 0;
   }
   
-  .search-box {
+  /* .search-box {
     margin-top: 1rem;
-  }
+  } */
   
   .hero-title {
     font-size: 2.5rem;
