@@ -42,31 +42,32 @@ document.addEventListener('DOMContentLoaded', function () {
         // Auto scroll function
         let scrollPosition = 0;
         const scrollSpeed = 1;
+        let animationFrameId;
 
         function autoScroll() {
             scrollPosition += scrollSpeed;
 
-            // Reset when reaching the end
-            if (scrollPosition >= (logoItems.length * logoItems[0].offsetWidth)) {
+            // Use the full scrollable width for seamless looping
+            if (scrollPosition >= logosContainer.scrollWidth / 2) {
                 scrollPosition = 0;
             }
 
             logosContainer.scrollLeft = scrollPosition;
-            requestAnimationFrame(autoScroll);
+            animationFrameId = requestAnimationFrame(autoScroll);
         }
 
         // Start auto-scrolling with a delay
         setTimeout(() => {
-            requestAnimationFrame(autoScroll);
+            animationFrameId = requestAnimationFrame(autoScroll);
         }, 2000);
 
         // Pause scrolling on hover
         logosContainer.addEventListener('mouseenter', () => {
-            cancelAnimationFrame(autoScroll);
+            cancelAnimationFrame(animationFrameId);
         });
 
         logosContainer.addEventListener('mouseleave', () => {
-            requestAnimationFrame(autoScroll);
+            animationFrameId = requestAnimationFrame(autoScroll);
         });
     }
 
