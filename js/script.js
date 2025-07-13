@@ -28,27 +28,34 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Automatic Logo Carousel
+    // Automatic Logo Carousel (Smooth Infinite Scroll, Faster, No Interaction)
     const logosContainer = document.getElementById('logos-container');
 
     if (logosContainer) {
-        // Clone the logos for infinite scroll effect
-        const logoItems = logosContainer.querySelectorAll('.logo-item');
+        // Clone all logo items for seamless infinite scroll
+        const logoItems = Array.from(logosContainer.querySelectorAll('.logo-item'));
+
+        // Duplicate all items once for seamless looping
         logoItems.forEach(item => {
             const clone = item.cloneNode(true);
             logosContainer.appendChild(clone);
         });
 
-        // Auto scroll function
+        // Set container to not wrap and enable smooth scroll
+        logosContainer.style.whiteSpace = 'nowrap';
+        logosContainer.style.overflowX = 'auto';
+        logosContainer.style.scrollBehavior = 'auto';
+
         let scrollPosition = 0;
-        const scrollSpeed = 1;
+        const scrollSpeed = 2.2; // Increased speed for faster scroll
         let animationFrameId;
 
         function autoScroll() {
             scrollPosition += scrollSpeed;
 
-            // Use the full scrollable width for seamless looping
-            if (scrollPosition >= logosContainer.scrollWidth / 2) {
+            // When scrolled past the original set, reset to start
+            const resetPoint = logosContainer.scrollWidth / 2;
+            if (scrollPosition >= resetPoint) {
                 scrollPosition = 0;
             }
 
@@ -56,18 +63,15 @@ document.addEventListener('DOMContentLoaded', function () {
             animationFrameId = requestAnimationFrame(autoScroll);
         }
 
-        // Start auto-scrolling with a delay
-        setTimeout(() => {
-            animationFrameId = requestAnimationFrame(autoScroll);
-        }, 2000);
+        // Start auto-scrolling immediately
+        animationFrameId = requestAnimationFrame(autoScroll);
 
-        // Pause scrolling on hover
-        logosContainer.addEventListener('mouseenter', () => {
-            cancelAnimationFrame(animationFrameId);
-        });
-
-        logosContainer.addEventListener('mouseleave', () => {
-            animationFrameId = requestAnimationFrame(autoScroll);
+        // Adjust scroll position on resize to prevent glitches
+        window.addEventListener('resize', () => {
+            if (scrollPosition >= logosContainer.scrollWidth / 2) {
+                scrollPosition = 0;
+                logosContainer.scrollLeft = 0;
+            }
         });
     }
 
