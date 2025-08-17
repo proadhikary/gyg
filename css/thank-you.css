@@ -292,6 +292,40 @@
   }
 }
 
+@media (max-width: 600px) {
+  .thank-you-content {
+    padding: 16px;
+    text-align: center;
+  }
+
+  .thank-you-title {
+    font-size: 1.4rem;
+  }
+
+  .thank-you-message {
+    font-size: 1rem;
+  }
+
+  .thank-you-buttons {
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin-top: 24px !important;
+    align-items: stretch !important;
+  }
+
+  .thank-you-btn {
+    min-width: unset !important;
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 12px 0 !important;
+    font-size: 1rem !important;
+  }
+
+  .wrapper {
+    margin-bottom: 18px;
+  }
+}
+
 
 
 .checkmark__circle {
